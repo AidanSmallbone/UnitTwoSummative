@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace POSSystem
 {
-    public partial class Form1 : Form
+    public partial class loginForm : Form
     {
-        public Form1()
+        public loginForm()
         {
             InitializeComponent();
+        }
+
+        private void forgotPasswordButton_Click(object sender, EventArgs e)
+        {
+            //names the forgot password form so we can call upon it, and shows the form
+
+            Form2 forgotPasswordForm = new Form2();
+            forgotPasswordForm.Show();
+        }
+
+        private void newAccountButton_Click(object sender, EventArgs e)
+        {
+            //names the new account form so we can call upon it, and shows the form
+
+            Form3 newAccountForm = new Form3();
+            newAccountForm.Show();
         }
     }
 }
