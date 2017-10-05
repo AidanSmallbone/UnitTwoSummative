@@ -1,6 +1,6 @@
 ﻿namespace POSSystem
 {
-    partial class loginForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -99,8 +99,9 @@
             this.loginButton.TabIndex = 6;
             this.loginButton.Text = "Log in";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // loginForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +114,7 @@
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.passwordInputTextBox);
             this.Controls.Add(this.usernameInputTextBox);
-            this.Name = "loginForm";
+            this.Name = "Form1";
             this.Text = "LOGIN";
             this.ResumeLayout(false);
             this.PerformLayout();

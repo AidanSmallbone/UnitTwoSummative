@@ -34,7 +34,7 @@
             this.hintInputTextBox = new System.Windows.Forms.TextBox();
             this.usernameInputLabel = new System.Windows.Forms.Label();
             this.passwordInputLabel = new System.Windows.Forms.Label();
-            this.cofirmPasswordInputLabel = new System.Windows.Forms.Label();
+            this.confirmPasswordInputLabel = new System.Windows.Forms.Label();
             this.passwordHintInputLabel = new System.Windows.Forms.Label();
             this.createAccountHeaderLabel = new System.Windows.Forms.Label();
             this.createAccountSubHeaderLabel = new System.Windows.Forms.Label();
@@ -88,14 +88,14 @@
             this.passwordInputLabel.TabIndex = 5;
             this.passwordInputLabel.Text = "Password:";
             // 
-            // cofirmPasswordInputLabel
+            // confirmPasswordInputLabel
             // 
-            this.cofirmPasswordInputLabel.AutoSize = true;
-            this.cofirmPasswordInputLabel.Location = new System.Drawing.Point(3, 109);
-            this.cofirmPasswordInputLabel.Name = "cofirmPasswordInputLabel";
-            this.cofirmPasswordInputLabel.Size = new System.Drawing.Size(94, 13);
-            this.cofirmPasswordInputLabel.TabIndex = 6;
-            this.cofirmPasswordInputLabel.Text = "Confirm Password:";
+            this.confirmPasswordInputLabel.AutoSize = true;
+            this.confirmPasswordInputLabel.Location = new System.Drawing.Point(3, 109);
+            this.confirmPasswordInputLabel.Name = "confirmPasswordInputLabel";
+            this.confirmPasswordInputLabel.Size = new System.Drawing.Size(94, 13);
+            this.confirmPasswordInputLabel.TabIndex = 6;
+            this.confirmPasswordInputLabel.Text = "Confirm Password:";
             // 
             // passwordHintInputLabel
             // 
@@ -157,7 +157,7 @@
             this.Controls.Add(this.createAccountSubHeaderLabel);
             this.Controls.Add(this.createAccountHeaderLabel);
             this.Controls.Add(this.passwordHintInputLabel);
-            this.Controls.Add(this.cofirmPasswordInputLabel);
+            this.Controls.Add(this.confirmPasswordInputLabel);
             this.Controls.Add(this.passwordInputLabel);
             this.Controls.Add(this.usernameInputLabel);
             this.Controls.Add(this.hintInputTextBox);
@@ -182,7 +182,7 @@
         private System.Windows.Forms.TextBox hintInputTextBox;
         private System.Windows.Forms.Label usernameInputLabel;
         private System.Windows.Forms.Label passwordInputLabel;
-        private System.Windows.Forms.Label cofirmPasswordInputLabel;
+        private System.Windows.Forms.Label confirmPasswordInputLabel;
         private System.Windows.Forms.Label passwordHintInputLabel;
         private System.Windows.Forms.Label createAccountHeaderLabel;
         private System.Windows.Forms.Label createAccountSubHeaderLabel;

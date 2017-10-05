@@ -1,6 +1,6 @@
 ﻿namespace POSSystem
 {
-    partial class Form2
+    partial class Form5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.passwordHintLabel = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
-            // passwordHintLabel
+            // checkedListBox1
             // 
-            this.passwordHintLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordHintLabel.Location = new System.Drawing.Point(12, 9);
-            this.passwordHintLabel.Name = "passwordHintLabel";
-            this.passwordHintLabel.Size = new System.Drawing.Size(235, 118);
-            this.passwordHintLabel.TabIndex = 0;
-            this.passwordHintLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(49, 134);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBox1.TabIndex = 0;
             // 
-            // Form2
+            // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 136);
-            this.Controls.Add(this.passwordHintLabel);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form2";
-            this.ShowIcon = false;
-            this.Text = "FORGOT PASSWORD";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.checkedListBox1);
+            this.Name = "Form5";
+            this.Text = "Form5";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label passwordHintLabel;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
