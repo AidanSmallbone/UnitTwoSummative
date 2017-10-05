@@ -66,7 +66,6 @@ namespace POSSystem
                 Form5 posSystem = new Form5(); //names the form where our POS system will exist
                 posSystem.Show(); //shows it
             }
-
         }
     }
 }

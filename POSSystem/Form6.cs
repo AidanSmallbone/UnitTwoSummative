@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace POSSystem
 {
-    public partial class Form5 : Form
+    public partial class Form6 : Form
     {
-        public Form5()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void settingsButton_Click(object sender, EventArgs e)
+        private void settingsSubHeaderLabel_Click(object sender, EventArgs e)
         {
 
         }
