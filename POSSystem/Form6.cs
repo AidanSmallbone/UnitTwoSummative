@@ -17,7 +17,7 @@ namespace POSSystem
             InitializeComponent();
         }
 
-        private void settingsSubHeaderLabel_Click(object sender, EventArgs e)
+        private void saveSettingsButton_Click(object sender, EventArgs e)
         {
 
         }
