@@ -35,9 +35,16 @@ namespace POSSystem
 
                 int howManyItems = Convert.ToInt32(itemCounter.Value); //converts the number the user input into an int variable
 
-                for (int i=0;i<howManyItems;i++)
-                {
+                itemPreviewTable.RowCount = howManyItems; //sets the amount of rows to the number the user has input
+                itemPreviewTable.ColumnCount = 2; //sets the amount of columns to 2 - we had it set to one so it looked better visually when there are no items inputted
+                itemPreviewTable.RowStyles.Clear(); //clears the default style for the rows in our table
+                itemPreviewTable.ColumnStyles.Clear(); //clears the default style for the columns in our table
 
+                itemPreviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, (itemPreviewTable.Width / 2))); //makes our column occupy half of the table (we only need to do this once since there are only 2 columns)
+
+                for (int i = 1; i <= itemPreviewTable.RowCount; i++) //loop adds a new row style for every row we add
+                {
+                    itemPreviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, (100 / howManyItems))); //sets the style to be a percent based on how many items the user has added
                 }
             }
         }

@@ -114,12 +114,12 @@
             // 
             this.itemPreviewTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.itemPreviewTable.ColumnCount = 1;
-            this.itemPreviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.itemPreviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.itemPreviewTable.Controls.Add(this.noItemsLabel, 0, 0);
             this.itemPreviewTable.Location = new System.Drawing.Point(330, 6);
             this.itemPreviewTable.Name = "itemPreviewTable";
             this.itemPreviewTable.RowCount = 1;
-            this.itemPreviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.itemPreviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.itemPreviewTable.Size = new System.Drawing.Size(256, 359);
             this.itemPreviewTable.TabIndex = 0;
             // 
