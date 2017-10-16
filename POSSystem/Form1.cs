@@ -19,27 +19,22 @@ namespace POSSystem
             InitializeComponent();
         }
 
-        private void forgotPasswordButton_Click(object sender, EventArgs e)
+        private void forgotPasswordButton_Click(object sender, EventArgs e) 
         {
-            //names the forgot password form so we can call upon it, and shows the form
-
-            Form2 forgotPasswordForm = new Form2();
+            Form2 forgotPasswordForm = new Form2(); //launches the forgot password form
             forgotPasswordForm.Show();
         }
 
         private void newAccountButton_Click(object sender, EventArgs e)
         {
-            //names the new account form so we can call upon it, and shows the form
-
-            Form3 newAccountForm = new Form3();
+            Form3 newAccountForm = new Form3(); //launches the new account form
             newAccountForm.Show();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
-            string username = File.ReadLines(@".\login.txt").Take(1).First(); //creates a string and sets the value to the username that's been saved
-            string password = File.ReadLines(@".\login.txt").Skip(1).Take(1).First(); //creates a string and sets the value to the password that's been saved
+            string username = File.ReadLines(@".\login.txt").Take(1).First(); //creates a vaiable that gets its value from a text file
+            string password = File.ReadLines(@".\login.txt").Skip(1).Take(1).First();
 
             if (usernameInputTextBox.Text != username) //checks if the correct username was entered
             {

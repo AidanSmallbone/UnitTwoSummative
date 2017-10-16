@@ -16,36 +16,54 @@ namespace POSSystem
         {
             InitializeComponent();
 
-            if  (itemPreviewTable.RowCount == 1 && itemPreviewTable.ColumnCount == 1) //checks to see if items have already been made
+            if  (itemPreviewTable.RowCount == 1 && itemPreviewTable.ColumnCount == 1) //checks to see if the user has created any items
             {
-                noItemsLabel.Visible = true; //tells the user to add some items to show them in the table
+                noItemsLabel.Visible = true; //shows the label telling the user to add some items
             }
 
-            if (itemPreviewTable.RowCount != 1 && itemPreviewTable.ColumnCount != 1) //checks to see if the user has added items
+            if (itemPreviewTable.RowCount != 1 && itemPreviewTable.ColumnCount != 1) //checks if the user has created any items
             {
-                noItemsLabel.Dispose(); //removes the label telling the user that they need to add items
+                noItemsLabel.Dispose(); //disposes of the label if they have created items
             }
         }
 
-        private void applyItemsNumberButton_Click(object sender, EventArgs e) //runs when the user applies how many items they want
+        private void applyItemsNumberButton_Click(object sender, EventArgs e)
         {
-            if (itemCounter.Value != 0) //only runs our code if the user has actually input a value, not 0
+            if (itemCounter.Value != 0) //only runs this code if the user has actually added some items, does nothing if they haven't
             {
-                noItemsLabel.Dispose(); //disposes of our label since we've created items and we don't need it anymore
+                noItemsLabel.Dispose(); //disposes of thr label if the user has added items
 
-                int howManyItems = Convert.ToInt32(itemCounter.Value); //converts the number the user input into an int variable
+                int howManyItems = Convert.ToInt32(itemCounter.Value); //creates a variable that gets its value from the output of the counter that sets how many items to create
 
-                itemPreviewTable.RowCount = howManyItems; //sets the amount of rows to the number the user has input
-                itemPreviewTable.ColumnCount = 2; //sets the amount of columns to 2 - we had it set to one so it looked better visually when there are no items inputted
-                itemPreviewTable.RowStyles.Clear(); //clears the default style for the rows in our table
-                itemPreviewTable.ColumnStyles.Clear(); //clears the default style for the columns in our table
+                itemPreviewTable.RowCount = howManyItems; //sets the amount of rows in our table to the amount of items the user has created
+                itemPreviewTable.ColumnCount = 2; //sets out column count to 2 (one for name, one for price)
+                itemPreviewTable.RowStyles.Clear(); //clears the styling of our table
+                itemPreviewTable.ColumnStyles.Clear();
 
-                itemPreviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, (itemPreviewTable.Width / 2))); //makes our column occupy half of the table (we only need to do this once since there are only 2 columns)
+                itemPreviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, (itemPreviewTable.Width / 2))); //sets the columns to half of the size of the table each
 
-                for (int i = 1; i <= itemPreviewTable.RowCount; i++) //loop adds a new row style for every row we add
+                for (int i = 1; i <= itemPreviewTable.RowCount; i++) //adds a new style for every row
                 {
-                    itemPreviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, (100 / howManyItems))); //sets the style to be a percent based on how many items the user has added
+                    itemPreviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, (100 / howManyItems))); //sets the rows sizing to the size of the table divided by how many items there are
                 }
+
+                int howManyRows = itemPreviewTable.RowCount; //creates a new variable based on how many rows are in the table
+                int rowItemCounter = 0; //creates a new variable to keep track of which row to put text boxes in
+
+                void addRow()
+                {
+                    itemPreviewTable.Controls.Add(new TextBox() { Dock = DockStyle.Fill, Name = "columnOneTextBox" + rowItemCounter}, 0, rowItemCounter); //creates a textbox in the first column of the table and names it
+                    itemPreviewTable.Controls.Add(new TextBox() { Dock = DockStyle.Fill, Name = "columnTwoTextBox" + rowItemCounter}, 1, rowItemCounter); //creates a textbox in the second column of the table and names it
+                    rowItemCounter = rowItemCounter + 1; //adds to our row variable so they controls are created in the right row
+                }
+
+                for (int i = 1; i <= howManyRows; i++) //loop that runs for how many items the user wants
+                {
+                    addRow(); //runs out addrow method
+                }
+
+                //columnOneTextBox1.Text = "Item Name";
+                //columnTwoTextBox1.Text = "Item Price";
             }
         }
     }

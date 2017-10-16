@@ -19,7 +19,7 @@ namespace POSSystem
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            Form6 settingsForm = new Form6();
+            Form6 settingsForm = new Form6(); //launches the settings form
             settingsForm.Show();
         }
     }
